@@ -1,4 +1,4 @@
-CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
+CPATH=".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar"
 
 rm -rf student-submission
 rm -rf grading-area
@@ -26,21 +26,14 @@ cp TestListExamples.java grading-area/
 cd grading-area
 javac -cp $CPATH *.java
 
-if [[ $? -ne 0 ]]
+if [ $? -ne 0 ]
 then
-       echo "Program failed to compile, see compile error above"
+       echo "Program didn't compile!"
        exit 1
+else 
+      echo "Compiled Successfully!"
 fi
 
-java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
-
-lastLine= $(junit-output.txt | tail -n 2 | head -n 1)
-test=$(awk -F'[, ]' '(print $3)')
-failures=$(awk -F'[, ]' '(print $7)'
-
-successes=$((tests - failures))
-
-echo "Your score is $succeses / $tests"
 
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
