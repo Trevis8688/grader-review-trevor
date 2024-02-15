@@ -35,9 +35,8 @@ else
 fi
 
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
-outcome = $(junit-output.txt)
 
-cat outcome
+cat > junit-output.txt
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
 
