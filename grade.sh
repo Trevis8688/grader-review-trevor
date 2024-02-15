@@ -36,7 +36,7 @@ fi
 
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
 
-cat > junit-output.txt
+cat junit-output.txt
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
 
