@@ -28,7 +28,7 @@ javac -cp $CPATH *.java
 
 if [ $? -ne 0 ]
 then
-       echo "Program didn't compile!"
+       echo "Program didn't compile, see error above."
        exit 1
 else 
       echo "Compiled Successfully!"
